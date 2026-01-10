@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Odev3Proje.AnaSayfa"
+             Title="Giriş"
+             
+             BackgroundColor="{AppThemeBinding Light=White, Dark=#121212}">
+
+    <ScrollView>
+        <VerticalStackLayout Spacing="20" Padding="30" VerticalOptions="Center">
+
+            <Label Text="ÖDEV - 3"
+                   FontSize="32"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center"
+                   TextColor="{AppThemeBinding Light=#512BD4, Dark=#BB86FC}"/>
+
+            <Border Stroke="{AppThemeBinding Light=#512BD4, Dark=#BB86FC}"
+                    StrokeThickness="4"
+                    StrokeShape="RoundRectangle 280"
+                    HeightRequest="280"
+                    WidthRequest="280"
+                    HorizontalOptions="Center">
+
+                <Image Source="muro.jpg" 
+                       Aspect="AspectFill"
+                       HeightRequest="280"
+                       WidthRequest="280"/>
+            </Border>
+
+            <Label Text="Murat Süleymanoğlu" 
+                   FontSize="28"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center"
+                   TextColor="{AppThemeBinding Light=Black, Dark=White}"/>
+
+            <Label Text="22010310067" 
+                   FontSize="22"
+                   HorizontalOptions="Center"
+                   TextColor="{AppThemeBinding Light=Black, Dark=White}"/>
+
+            <Label Text="Bartın Üniversitesi Bilgisayar Mühendisliği Bölümü 3. Sınıf" 
+                   FontSize="16"
+                   HorizontalOptions="Center"
+                   HorizontalTextAlignment="Center"
+                   TextColor="{AppThemeBinding Light=Gray, Dark=#B0B0B0}"/>
+
+            <Frame BackgroundColor="{AppThemeBinding Light=#FFF4E5, Dark=#3E2723}" 
+                   BorderColor="{AppThemeBinding Light=#FFCC80, Dark=#FFB74D}" 
+                   CornerRadius="10" 
+                   Padding="15">
+
+            </Frame>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

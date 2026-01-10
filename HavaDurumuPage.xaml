@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Odev3Proje.HavaDurumuPage"
+             Title="Hava Durumu"
+             
+             BackgroundColor="{AppThemeBinding Light=White, Dark=#121212}">
+
+    <Grid RowDefinitions="Auto, *">
+
+        <Frame Grid.Row="0" BackgroundColor="#512BD4" Padding="10" Margin="10" CornerRadius="10" BorderColor="Transparent">
+            <Grid ColumnDefinitions="*, Auto, Auto">
+                <Entry x:Name="entSehir" Placeholder="Şehir adı girin (Örn: Bartın)" 
+                       TextColor="White" PlaceholderColor="#E0E0E0"/>
+
+                <Button Grid.Column="1" Text="Ekle" Clicked="OnEkleClicked" 
+                        BackgroundColor="White" TextColor="#512BD4" FontAttributes="Bold" Margin="5,0"/>
+
+                <Button Grid.Column="2" Text="🗑" Clicked="OnTemizleClicked" 
+                        BackgroundColor="#D32F2F" TextColor="White" Margin="5,0"/>
+            </Grid>
+        </Frame>
+
+        <CollectionView x:Name="listSehirler" Grid.Row="1" Margin="10">
+            <CollectionView.ItemsLayout>
+                <LinearItemsLayout Orientation="Vertical" ItemSpacing="15"/>
+            </CollectionView.ItemsLayout>
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Frame CornerRadius="10" HasShadow="True" Padding="0" IsClippedToBounds="True" BorderColor="Transparent"
+                           BackgroundColor="{AppThemeBinding Light=White, Dark=#1F1F1F}">
+
+                        <StackLayout>
+                            <Grid ColumnDefinitions="*, Auto" Padding="10" 
+                                  BackgroundColor="{AppThemeBinding Light=#FAFAFA, Dark=#252525}">
+
+                                <Label Text="{Binding Isim}" FontSize="20" FontAttributes="Bold" 
+                                       TextColor="{AppThemeBinding Light=Black, Dark=White}" 
+                                       VerticalOptions="Center"/>
+
+                                <Button Grid.Column="1" Text="Sil" CommandParameter="{Binding .}" 
+                                        Clicked="OnSilClicked" HeightRequest="35" BackgroundColor="#D32F2F" TextColor="White"/>
+                            </Grid>
+
+                            <Image Source="{Binding ResimUrl}" 
+                                   HeightRequest="140" 
+                                   Aspect="Fill" 
+                                   BackgroundColor="{AppThemeBinding Light=Black, Dark=#121212}"/>
+                        </StackLayout>
+                    </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </Grid>
+</ContentPage>

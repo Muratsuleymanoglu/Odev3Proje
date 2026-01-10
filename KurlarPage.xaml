@@ -1,0 +1,45 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Odev3Proje.KurlarPage"
+             Title="Güncel Kurlar"
+             
+             BackgroundColor="{AppThemeBinding Light=White, Dark=#121212}">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Yenile" Clicked="OnRefreshClicked"/>
+    </ContentPage.ToolbarItems>
+
+    <Grid RowDefinitions="Auto,*">
+
+        <Grid Grid.Row="0" ColumnDefinitions="2*,1.5*,1.5*,1*,0.5*" Padding="10" 
+              BackgroundColor="{AppThemeBinding Light=#E0E0E0, Dark=#1F1F1F}">
+
+            <Label Text="TÜR" TextColor="#BB86FC" FontAttributes="Bold"/>
+            <Label Grid.Column="1" Text="ALIŞ" TextColor="#BB86FC" FontAttributes="Bold"/>
+            <Label Grid.Column="2" Text="SATIŞ" TextColor="#BB86FC" FontAttributes="Bold"/>
+            <Label Grid.Column="3" Text="FARK" TextColor="#BB86FC" FontAttributes="Bold"/>
+            <Label Grid.Column="4" Text="" TextColor="#BB86FC" FontAttributes="Bold"/>
+        </Grid>
+
+        <ActivityIndicator x:Name="loading" Grid.Row="1" IsRunning="False" IsVisible="False" Color="#BB86FC" VerticalOptions="Center" HorizontalOptions="Center"/>
+
+        <CollectionView x:Name="listKurlar" Grid.Row="1">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Grid ColumnDefinitions="2*,1.5*,1.5*,1*,0.5*" Padding="10" 
+                          BackgroundColor="{AppThemeBinding Light=White, Dark=#121212}">
+
+                        <BoxView Grid.ColumnSpan="5" HeightRequest="1" Color="#333" VerticalOptions="End"/>
+
+                        <Label Text="{Binding Tur}" TextColor="{AppThemeBinding Light=Black, Dark=White}" VerticalOptions="Center"/>
+                        <Label Grid.Column="1" Text="{Binding Alis}" TextColor="{AppThemeBinding Light=DarkGray, Dark=LightGray}" VerticalOptions="Center"/>
+                        <Label Grid.Column="2" Text="{Binding Satis}" TextColor="{AppThemeBinding Light=DarkGray, Dark=LightGray}" VerticalOptions="Center"/>
+                        <Label Grid.Column="3" Text="{Binding Degisim}" TextColor="{Binding Renk}" VerticalOptions="Center"/>
+                        <Label Grid.Column="4" Text="{Binding Yon}" TextColor="{Binding Renk}" FontAttributes="Bold" VerticalOptions="Center"/>
+                    </Grid>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+    </Grid>
+</ContentPage>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Odev3Proje.AyarlarPage"
+             Title="Ayarlar"
+             BackgroundColor="{AppThemeBinding Light=White, Dark=#121212}">
+
+    <VerticalStackLayout Spacing="20" Padding="20">
+
+        <Label Text="Uygulama Ayarları"
+               FontSize="24"
+               FontAttributes="Bold"
+               TextColor="{AppThemeBinding Light=Black, Dark=White}"
+               HorizontalOptions="Center" />
+
+        <BoxView HeightRequest="1" Color="Gray" Opacity="0.5" />
+
+        <Frame Padding="15" CornerRadius="10" BackgroundColor="{AppThemeBinding Light=#F0F0F0, Dark=#1F1F1F}" BorderColor="Transparent">
+            <Grid ColumnDefinitions="*, Auto">
+                <VerticalStackLayout Grid.Column="0" Spacing="2">
+                    <Label Text="Koyu Tema" 
+                           FontSize="18" 
+                           FontAttributes="Bold"
+                           TextColor="{AppThemeBinding Light=Black, Dark=White}"/>
+                    <Label Text="Uygulamanın görünümünü koyu moda geçir" 
+                           FontSize="12" 
+                           TextColor="Gray"/>
+                </VerticalStackLayout>
+
+                <Switch x:Name="swTema"
+                        Grid.Column="1"
+                        Toggled="swTema_Toggled"
+                        OnColor="#512BD4"
+                        ThumbColor="White"/>
+            </Grid>
+        </Frame>
+
+        <Label Text="Not: Tema değişikliği tüm sayfaları etkiler."
+               FontSize="12"
+               TextColor="Gray"
+               HorizontalOptions="Center"
+               Margin="0,20,0,0"/>
+
+    </VerticalStackLayout>
+</ContentPage>

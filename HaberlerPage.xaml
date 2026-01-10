@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Odev3Proje.HaberlerPage"
+             Title="Son Dakika Haberler"
+             
+             BackgroundColor="{AppThemeBinding Light=#F5F5F5, Dark=#121212}">
+
+    <Grid RowDefinitions="Auto,*">
+
+        <ScrollView Orientation="Horizontal" Grid.Row="0" Padding="10" 
+                    BackgroundColor="{AppThemeBinding Light=White, Dark=#1F1F1F}">
+            <HorizontalStackLayout Spacing="10">
+                <Button Text="Manşet" Clicked="KategoriSec_Clicked" CommandParameter="manset" BackgroundColor="#512BD4" TextColor="White"/>
+                <Button Text="Gündem" Clicked="KategoriSec_Clicked" CommandParameter="gundem" BackgroundColor="#512BD4" TextColor="White"/>
+                <Button Text="Spor" Clicked="KategoriSec_Clicked" CommandParameter="spor" BackgroundColor="#512BD4" TextColor="White"/>
+                <Button Text="Ekonomi" Clicked="KategoriSec_Clicked" CommandParameter="ekonomi" BackgroundColor="#512BD4" TextColor="White"/>
+                <Button Text="Teknoloji" Clicked="KategoriSec_Clicked" CommandParameter="bilim_teknoloji" BackgroundColor="#512BD4" TextColor="White"/>
+            </HorizontalStackLayout>
+        </ScrollView>
+
+        <ActivityIndicator x:Name="loading" 
+                           Grid.Row="1" 
+                           IsRunning="True" 
+                           Color="{AppThemeBinding Light=#512BD4, Dark=#BB86FC}" 
+                           VerticalOptions="Center"/>
+
+        <CollectionView x:Name="listHaberler" Grid.Row="1" SelectionMode="Single" SelectionChanged="OnHaberSecildi" Margin="0,5,0,0">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Frame Margin="10,5" Padding="0" CornerRadius="10" HasShadow="True" BorderColor="Transparent"
+                           BackgroundColor="{AppThemeBinding Light=White, Dark=#1F1F1F}" HeightRequest="100">
+
+                        <Grid ColumnDefinitions="130,*">
+                            <Image Source="{Binding Gorsel}" 
+                                   Aspect="AspectFill" 
+                                   Grid.Column="0"
+                                   HeightRequest="100" 
+                                   WidthRequest="130"/>
+
+                            <VerticalStackLayout Grid.Column="1" Padding="10" VerticalOptions="Center" Spacing="5">
+
+                                <Label Text="{Binding Baslik}" 
+                                       FontAttributes="Bold" 
+                                       MaxLines="2" 
+                                       LineBreakMode="TailTruncation" 
+                                       TextColor="{AppThemeBinding Light=Black, Dark=White}"
+                                       FontSize="14"/>
+
+                                <Label Text="{Binding Tarih}" 
+                                       FontSize="11" 
+                                       TextColor="{AppThemeBinding Light=Gray, Dark=#B0B0B0}"/>
+                            </VerticalStackLayout>
+                        </Grid>
+                    </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </Grid>
+</ContentPage>
