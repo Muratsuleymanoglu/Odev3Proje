@@ -12,12 +12,12 @@ Bölüm: Bilgisayar Mühendisliği
 ## 🚀 Proje Özellikleri ve Kullanılan Teknolojiler
 Proje .NET MAUI (Multi-platform App UI) kullanılarak geliştirilmiş olup aşağıdaki teknik isterleri karşılamaktadır:
 
-# 1. 🔐 Kullanıcı İşlemleri (Firebase Authentication)
+## 1. 🔐 Kullanıcı İşlemleri (Firebase Authentication)
 Kullanıcılar e-posta ve şifre ile Kayıt Olabilir ve Giriş Yapabilir.
 
 Giriş ekranı tasarımı ve animasyonlu geçişler.
 
-# 2. ✅ Yapılacaklar Listesi (Firebase Realtime Database)
+## 2. ✅ Yapılacaklar Listesi (Firebase Realtime Database)
 Bulut tabanlı CRUD (Ekle, Oku, Güncelle, Sil) işlemleri.
 
 FirebaseDatabase.net kütüphanesi ile Asenkron (Async/Await) veri iletişimi.
@@ -26,7 +26,7 @@ Görevlerin yapıldı/yapılmadı durumunun CheckBox ile anlık güncellenmesi.
 
 Tamamlanan görevlerin üzerinin otomatik çizilmesi (Converter yapısı).
 
-# 3. 📰 Haberler (XML / RSS Parsing)
+## 3. 📰 Haberler (XML / RSS Parsing)
 TRT Haber RSS servisinden XML formatında veri çekme.
 
 XDocument ve LINQ kullanılarak verilerin parse edilmesi.
@@ -35,14 +35,14 @@ Kategorilere göre (Spor, Ekonomi, Teknoloji vb.) dinamik haber filtreleme.
 
 Haber detayına tıklandığında ilgili habere gitme ve Paylaşma (Share API) özelliği.
 
-# 4. 💰 Döviz Kurları (JSON API)
+## 4. 💰 Döviz Kurları (JSON API)
 Truncgil Finans API kullanılarak anlık döviz verilerinin çekilmesi.
 
 HttpClient ve System.Text.Json ile veri işleme.
 
 Dolar, Euro, Altın gibi değerlerin anlık değişimi ve renk kodları (Artış/Azalış).
 
-# 5. ⛅ Hava Durumu (Yerel Depolama / Persistence)
+## 5. ⛅ Hava Durumu (Yerel Depolama / Persistence)
 Kullanıcının belirlediği şehirlerin listelenmesi.
 
 Verilerin JSON formatında cihazın yerel hafızasına (FileSystem.AppDataDirectory) kaydedilmesi.
@@ -51,7 +51,7 @@ Uygulama kapatılıp açıldığında şehir listesinin korunması.
 
 MGM (Meteoroloji Genel Müdürlüğü) kaynaklı ikon gösterimi.
 
-# 6. ⚙️ Ayarlar ve Tema
+## 6. ⚙️ Ayarlar ve Tema
 Uygulama genelinde Açık (Light) ve Koyu (Dark) mod desteği.
 
 Ayarlar sayfasından tema değiştirme ve tercihin anlık uygulanması.
@@ -78,35 +78,35 @@ Hedef cihazı (Android Emulator veya Windows Machine) seçerek projeyi başlatı
 
 ## 📷 Ekran Görüntüleri
 
-# Giriş Ekranı
+## Giriş Ekranı
 
 <img width="1419" height="690" alt="image" src="https://github.com/user-attachments/assets/ece18d6f-0bf5-43d7-b1df-dc874f2e88d7" />
 
-# AnaSayfa Ekranı
+## AnaSayfa Ekranı
 
 <img width="1919" height="1017" alt="image" src="https://github.com/user-attachments/assets/2cdd400c-c91a-4402-a6b3-18cc623d38c4" />
 
-# Güncel Kurlar Ekranı
+## Güncel Kurlar Ekranı
 
 <img width="1919" height="1014" alt="image" src="https://github.com/user-attachments/assets/807201f6-1c5c-48d9-a75b-22eb8e04a2ca" />
 
-# Haberler Ekranı
+## Haberler Ekranı
 
 <img width="1919" height="1017" alt="image" src="https://github.com/user-attachments/assets/7872f02e-50ca-47aa-be04-13fe81d70abe" />
 
-# Haber Detay Ekranı
+## Haber Detay Ekranı
 
 <img width="1919" height="1021" alt="image" src="https://github.com/user-attachments/assets/2cf97868-9613-4cbd-89e2-98c7c195ece7" />
 
-# Hava Durumu Ekranı
+## Hava Durumu Ekranı
 
 <img width="1918" height="1017" alt="image" src="https://github.com/user-attachments/assets/66fc6c95-ddaa-4955-8081-dfdf9b821886" />
 
-# Yapılacaklar Ekranı
+## Yapılacaklar Ekranı
 
 <img width="1919" height="1016" alt="image" src="https://github.com/user-attachments/assets/d0134ee4-0ee1-4d99-a7fa-dfb8304d7fd3" />
 
-# Ayarlar Ekranı
+## Ayarlar Ekranı
 
 <img width="1919" height="1021" alt="image" src="https://github.com/user-attachments/assets/befcd7f3-ab38-49db-9d7c-945045359f17" />
 
